@@ -4,7 +4,8 @@
   "description": "Support ticket app",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
   },
   "author": "Julian LK (project created by Traversy Media)",
   "license": "ISC",
