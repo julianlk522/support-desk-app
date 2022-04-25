@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NewTicket from './pages/NewTicket';
 import Register from './pages/Register';
-import NewTicket from './pages/NewTicket';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
