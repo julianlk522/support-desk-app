@@ -8,7 +8,7 @@ import BackButton from '../components/BackButton'
 
 function NewTicket() {
   const {user} = useSelector((state) => state.auth)
-  const {isLoading, isError, isSuccess, message} = useSelector((state) => state.ticket)
+  const {isLoading, isError, isSuccess, message} = useSelector((state) => state.tickets)
 
   const [name] = useState(user.name)  
   const [email] = useState(user.email)  
@@ -29,7 +29,7 @@ function NewTicket() {
     }
 
     dispatch(reset())
-  }, [dispatch, isError, isSuccess, message])
+  }, [dispatch, navigate, isError, isSuccess, message])
   
   const onSubmit = (e) => {
     e.preventDefault()
