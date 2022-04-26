@@ -17,7 +17,7 @@ function Tickets() {
         }
     }, [dispatch, isSuccess])
     
-    //  Load tickets
+    //  Load tickets if they exist or are changed
     useEffect(() => {
         dispatch(getTickets())
     }, [dispatch])
