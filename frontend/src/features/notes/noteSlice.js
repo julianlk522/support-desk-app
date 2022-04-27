@@ -3,7 +3,7 @@ import noteService from './noteService'
 
 const initialState = {
     notes: [],
-    isError: false,
+    isLoading: false,
     isSuccess: false,
     isError: false,
     message: ''
@@ -13,6 +13,7 @@ const initialState = {
 export const getNotes = createAsyncThunk('notes/getAll', async (ticketId, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth.user.token
+        console.log(await noteService.getNotes(ticketId, token))
         return await noteService.getNotes(ticketId, token)
     } catch (error) {
         const message = 
